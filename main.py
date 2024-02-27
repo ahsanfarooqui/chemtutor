@@ -55,4 +55,5 @@ if text_prompt:
 ])
   chain = prompt | llm 
   response = chain.invoke({"input": text_prompt, "lookup_text" : str(prompt_infos)})
-  st.markdown(response.content)
+  #st.markdown(response.content)
+  st.write(response.content)
