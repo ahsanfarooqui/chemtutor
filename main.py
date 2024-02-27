@@ -48,7 +48,7 @@ text_prompt = st.text_input("Ask your questions here: ")
 
 if text_prompt:
   prompt = ChatPromptTemplate.from_messages([
-     ("system", "Output of any answer should be in markdown format. Especially, when writing chemical equations, please ensure to use appropriate markdown to format it properly."),
+     ("system", "Output of any answer should be in markdown format. Especially, when writing chemical equations, please ensure to use appropriate markdown to format it properly. Enclose all equations with a $ for appropriate markdown processing."),
     ("system", "I am a chemistry o levels teacher. I know alot about all kinds of chemistry questions including organic chemistry, inorganic chemistry etc. Ask me any questions regarding chemistry.\
      For a specific question, I find more information about keywords present in the user's question in the this lookup data {lookup_text}."),
     ("user", "Yes I am struggling with this question regarding chemistry: {input}")
